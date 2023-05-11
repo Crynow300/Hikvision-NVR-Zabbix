@@ -1,0 +1,22 @@
+zabbix_export:
+  version: '6.2'
+  date: '2023-05-11T11:15:56Z'
+  host_groups:
+    -
+      uuid: 9043df7620a043c1ab05481417862702
+      name: NVR
+  hosts:
+    -
+      host: NVR-Abramova18
+      name: NVR-Abramova18
+      templates:
+        -
+          name: HiWatch
+      groups:
+        -
+          name: NVR
+      interfaces:
+        -
+          ip: 192.168.15.67
+          interface_ref: if1
+      inventory_mode: DISABLED
