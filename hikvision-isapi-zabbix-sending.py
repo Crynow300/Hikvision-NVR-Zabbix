@@ -20,7 +20,7 @@ hostname = args.hostname
 
 #Auth String
 username = 'admin'
-password = 'Pivtochk@2023'
+password = 'admin'
 auth = HTTPDigestAuth(username, password)
 
 #Items ISAPI URL`s
