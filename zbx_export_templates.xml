@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>6.2</version>
+    <date>2023-05-11T11:14:49Z</date>
+    <template_groups>
+        <template_group>
+            <uuid>d37f71c7e3f7469bab645852a69a2018</uuid>
+            <name>Templates/Video surveillance</name>
+        </template_group>
+    </template_groups>
+    <templates>
+        <template>
+            <uuid>ca6195cad686458b9d2d5c22bc155169</uuid>
+            <template>HiWatch</template>
+            <name>HiWatch</name>
+            <groups>
+                <group>
+                    <name>Templates/Video surveillance</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <uuid>daf82b5220ad46dcb794307cfb3e181f</uuid>
+                    <name>ICMP ping</name>
+                    <type>SIMPLE</type>
+                    <key>icmpping</key>
+                    <triggers>
+                        <trigger>
+                            <uuid>7d7d3f0f59ff47bfa9a5df4119318c1d</uuid>
+                            <expression>last(/HiWatch/icmpping)=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>last(/HiWatch/icmpping)=1</recovery_expression>
+                            <name>Unavailable by ICMP ping</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>30f87a8708904365b959abab0cc4a16b</uuid>
+                    <name>Camera 1 Status</name>
+                    <type>TRAP</type>
+                    <key>nvr.chan1.status</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <triggers>
+                        <trigger>
+                            <uuid>3ccf84add12c41fc95d59340a3a1c4f8</uuid>
+                            <expression>find(/HiWatch/nvr.chan1.status,,,&quot;false&quot;)=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>find(/HiWatch/nvr.chan1.status,,,&quot;true&quot;)=1</recovery_expression>
+                            <name>Camera 1 down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>6a5f8d6751d943c99789d967059051e2</uuid>
+                    <name>Camera 2 Status</name>
+                    <type>TRAP</type>
+                    <key>nvr.chan2.status</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <triggers>
+                        <trigger>
+                            <uuid>563d895f417b4fd492b8d5e3df41b261</uuid>
+                            <expression>find(/HiWatch/nvr.chan2.status,,,&quot;false&quot;)=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>find(/HiWatch/nvr.chan2.status,,,&quot;true&quot;)=1</recovery_expression>
+                            <name>Camera 2 down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>ccaf52ebe0004b81ba0178d35fd1db4b</uuid>
+                    <name>Camera 3 Status</name>
+                    <type>TRAP</type>
+                    <key>nvr.chan3.status</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <triggers>
+                        <trigger>
+                            <uuid>229e4ab53c9f4a87b70db67b2002ebb1</uuid>
+                            <expression>find(/HiWatch/nvr.chan3.status,,,&quot;false&quot;)=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>find(/HiWatch/nvr.chan3.status,,,&quot;true&quot;)=1</recovery_expression>
+                            <name>Camera 3 down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>f7da690d94ff4b9392caf80ba962b868</uuid>
+                    <name>Camera 4 Status</name>
+                    <type>TRAP</type>
+                    <key>nvr.chan4.status</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <triggers>
+                        <trigger>
+                            <uuid>e20ce4e151bf4f61a7b0d9cb943fdaa8</uuid>
+                            <expression>find(/HiWatch/nvr.chan4.status,,,&quot;false&quot;)=1</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>find(/HiWatch/nvr.chan4.status,,,&quot;true&quot;)=1</recovery_expression>
+                            <name>Camera 4 down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>62b5e0865960449ba8ae6a2abaae3980</uuid>
+                    <name>HDD capacity</name>
+                    <type>TRAP</type>
+                    <key>nvr.hdd.capacity</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                </item>
+                <item>
+                    <uuid>831e9f539da0400ea2a896e2971eeed7</uuid>
+                    <name>HDD free space</name>
+                    <type>TRAP</type>
+                    <key>nvr.hdd.free.space</key>
+                    <delay>0</delay>
+                </item>
+                <item>
+                    <uuid>dc92508ddaee499b8b13898b936260ec</uuid>
+                    <name>HDD status</name>
+                    <type>TRAP</type>
+                    <key>nvr.hdd.status</key>
+                    <delay>0</delay>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <triggers>
+                        <trigger>
+                            <uuid>a09fc72f18ec468b86224d68e3c84754</uuid>
+                            <expression>find(/HiWatch/nvr.hdd.status,,,&quot;ok&quot;)=0</expression>
+                            <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                            <recovery_expression>find(/HiWatch/nvr.hdd.status,,,&quot;ok&quot;)=1</recovery_expression>
+                            <name>HDD Status</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>
