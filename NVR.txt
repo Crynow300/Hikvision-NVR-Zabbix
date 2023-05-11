@@ -1,0 +1,10 @@
+192.168.15.188 NVR-Garaznaya27
+192.168.15.110 NVR-Novoizmailovskay13
+192.168.15.116 NVR-Nevskaya7
+192.168.15.139 NVR-Ekaterininskay17
+192.168.15.58 NVR-Geroev33
+192.168.15.92 NVR-Valdaiskaya6
+192.168.2.95 NVR-OfficeIT
+192.168.14.89 NVR-Kolpinskoe34
+192.168.15.171 NVR-Grashdanskiy177
+192.168.15.158 NVR-Planernaya87
