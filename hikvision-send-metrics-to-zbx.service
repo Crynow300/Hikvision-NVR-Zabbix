@@ -1,0 +1,11 @@
+[Unit]
+Description=hikvision-isapi-test
+
+[Service]
+ExecStart=/usr/bin/python3 /home/adminn/HikvisionZabbix/starter.py
+Restart=always
+RestartSec=300
+StandardOutput=file:/var/log/hikvision/hikvision-isapi-test.log
+
+[Install]
+WantedBy=multi-user.target
