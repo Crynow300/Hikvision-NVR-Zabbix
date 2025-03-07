@@ -7,8 +7,8 @@ zabbix_export:
       name: NVR
   hosts:
     -
-      host: NVR-Abramova18
-      name: NVR-Abramova18
+      host: NVR-1
+      name: NVR-1
       templates:
         -
           name: HiWatch
@@ -17,6 +17,6 @@ zabbix_export:
           name: NVR
       interfaces:
         -
-          ip: 192.168.15.67
+          ip: 192.168.1.10
           interface_ref: if1
       inventory_mode: DISABLED
